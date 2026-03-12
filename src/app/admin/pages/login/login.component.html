@@ -1,0 +1,45 @@
+<section class="login">
+
+  <div class="login__card">
+
+    <!-- Botón volver -->
+    <button class="login__back" (click)="goHome()">
+      ← Volver al inicio
+    </button>
+
+    <h1 class="login__title">OBS Infantil</h1>
+    <p class="login__subtitle">Panel de Administración</p>
+
+    <form (ngSubmit)="login()" class="login__form">
+
+      <div class="login__group">
+        <label>Correo electrónico</label>
+        <input
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="admin@obsinfantil.com"
+          required
+        >
+      </div>
+
+      <div class="login__group">
+        <label>Contraseña</label>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="••••••••"
+          required
+        >
+      </div>
+
+      <button class="login__btn" type="submit">
+        Iniciar sesión
+      </button>
+
+    </form>
+
+  </div>
+
+</section>

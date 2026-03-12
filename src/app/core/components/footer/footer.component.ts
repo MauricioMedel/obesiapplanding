@@ -12,11 +12,7 @@ export class FooterComponent {
   year = new Date().getFullYear();
 
   members = [
-    'García López, Ana Sofía',
-    'Martínez Ruiz, Carlos Eduardo',
-    'Hernández Vega, Daniela',
-    'Torres Mendoza, Luis Miguel',
-    'Ramírez Castro, Valeria',
+    'Mauricio Medel de jesus', 'David Flores Pozos'
   ];
 
   quickLinks = [

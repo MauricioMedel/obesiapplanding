@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
+
+  constructor(private router: Router) {}
+
   menuOpen = false;
   scrolled = false;
 
@@ -35,4 +39,9 @@ export class NavbarComponent {
     this.menuOpen = false;
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   }
+
+  login() {
+    this.router.navigate(['/login']);
+  }
+
 }

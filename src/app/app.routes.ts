@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
+
+  // Landing pública
   {
     path: '',
     loadComponent: () =>
@@ -8,5 +10,29 @@ export const routes: Routes = [
         m => m.LandingPageComponent
       ),
   },
-  { path: '**', redirectTo: '' },
+
+  // Login Admin
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('./admin/pages/login/login.component').then(
+        m => m.LoginComponent
+      ),
+  },
+
+   // Panel
+  {
+    path: 'panel',
+    loadComponent: () =>
+      import('./panel/pages/panel/panel.component')
+      .then(m => m.PanelComponent),
+  },
+
+
+  // Ruta no encontrada
+  {
+    path: '**',
+    redirectTo: '',
+  }
+
 ];

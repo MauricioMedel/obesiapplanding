@@ -6,21 +6,27 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./features/landing/pages/landing-page/landing-page.component').then(
-        m => m.LandingPageComponent
-      ),
+      import('./features/landing/pages/landing-page/landing-page.component')
+      .then(m => m.LandingPageComponent),
   },
 
-  // Login Admin
+  // Login
   {
     path: 'login',
     loadComponent: () =>
-      import('./admin/pages/login/login.component').then(
-        m => m.LoginComponent
-      ),
+      import('./admin/pages/login/login.component')
+      .then(m => m.LoginComponent),
   },
 
-   // Panel
+  // Registro usuario
+  {
+    path: 'registro_usuario',
+    loadComponent: () =>
+      import('./admin/pages/registro-usuario/registro-usuario.component')
+      .then(m => m.RegistroUsuarioComponent),
+  },
+
+  // Panel
   {
     path: 'panel',
     loadComponent: () =>
@@ -28,8 +34,6 @@ export const routes: Routes = [
       .then(m => m.PanelComponent),
   },
 
-
-  // Ruta no encontrada
   {
     path: '**',
     redirectTo: '',

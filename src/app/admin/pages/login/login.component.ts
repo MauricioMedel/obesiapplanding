@@ -17,6 +17,13 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
+  // 👁️ mostrar / ocultar contraseña
+  showPassword: boolean = false;
+
+  togglePassword(){
+    this.showPassword = !this.showPassword;
+  }
+
   login() {
 
     if (!this.email || !this.password) {
@@ -27,8 +34,7 @@ export class LoginComponent {
     console.log('Email:', this.email);
     console.log('Password:', this.password);
 
-    // Aquí después conectarás tu backend
-    // Por ahora solo redirige al panel
+    // aquí después conectarás tu backend
     this.router.navigate(['/panel']);
   }
 
